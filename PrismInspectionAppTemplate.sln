@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34902.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismInspectionAppTemplate", "PrismInspectionAppTemplate\PrismInspectionAppTemplate.csproj", "{ECC04FD3-10FE-48D0-AF7A-873CF9439A29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismInspectionAppTemplate.Core", "PrismInspectionAppTemplate.Core\PrismInspectionAppTemplate.Core.csproj", "{2DCBFEA2-31BA-44A0-8B2F-EF2E7EF07621}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{056E334B-67D1-4D1F-8C6B-530ED08015F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismInspectionAppTemplate.Setting", "PrismInspectionAppTemplate.Setting\PrismInspectionAppTemplate.Setting.csproj", "{B0B799BB-7CA2-4B34-B0CD-4DF64EA69098}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismInspectionAppTemplate.Home", "PrismInspectionAppTemplate.Home\PrismInspectionAppTemplate.Home.csproj", "{46C50726-5A97-4142-97B3-F4B18098D51A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismInspectionAppTemplate.ControlBar", "PrismInspectionAppTemplate.ControlBar\PrismInspectionAppTemplate.ControlBar.csproj", "{F5A77591-647B-46AB-B7AA-3CC1ACB8C569}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECC04FD3-10FE-48D0-AF7A-873CF9439A29}.Debug|x64.ActiveCfg = Debug|x64
+		{ECC04FD3-10FE-48D0-AF7A-873CF9439A29}.Debug|x64.Build.0 = Debug|x64
+		{ECC04FD3-10FE-48D0-AF7A-873CF9439A29}.Release|x64.ActiveCfg = Release|x64
+		{ECC04FD3-10FE-48D0-AF7A-873CF9439A29}.Release|x64.Build.0 = Release|x64
+		{2DCBFEA2-31BA-44A0-8B2F-EF2E7EF07621}.Debug|x64.ActiveCfg = Debug|x64
+		{2DCBFEA2-31BA-44A0-8B2F-EF2E7EF07621}.Debug|x64.Build.0 = Debug|x64
+		{2DCBFEA2-31BA-44A0-8B2F-EF2E7EF07621}.Release|x64.ActiveCfg = Release|x64
+		{2DCBFEA2-31BA-44A0-8B2F-EF2E7EF07621}.Release|x64.Build.0 = Release|x64
+		{B0B799BB-7CA2-4B34-B0CD-4DF64EA69098}.Debug|x64.ActiveCfg = Debug|x64
+		{B0B799BB-7CA2-4B34-B0CD-4DF64EA69098}.Debug|x64.Build.0 = Debug|x64
+		{B0B799BB-7CA2-4B34-B0CD-4DF64EA69098}.Release|x64.ActiveCfg = Release|x64
+		{B0B799BB-7CA2-4B34-B0CD-4DF64EA69098}.Release|x64.Build.0 = Release|x64
+		{46C50726-5A97-4142-97B3-F4B18098D51A}.Debug|x64.ActiveCfg = Debug|x64
+		{46C50726-5A97-4142-97B3-F4B18098D51A}.Debug|x64.Build.0 = Debug|x64
+		{46C50726-5A97-4142-97B3-F4B18098D51A}.Release|x64.ActiveCfg = Release|x64
+		{46C50726-5A97-4142-97B3-F4B18098D51A}.Release|x64.Build.0 = Release|x64
+		{F5A77591-647B-46AB-B7AA-3CC1ACB8C569}.Debug|x64.ActiveCfg = Debug|x64
+		{F5A77591-647B-46AB-B7AA-3CC1ACB8C569}.Debug|x64.Build.0 = Debug|x64
+		{F5A77591-647B-46AB-B7AA-3CC1ACB8C569}.Release|x64.ActiveCfg = Release|x64
+		{F5A77591-647B-46AB-B7AA-3CC1ACB8C569}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0B799BB-7CA2-4B34-B0CD-4DF64EA69098} = {056E334B-67D1-4D1F-8C6B-530ED08015F1}
+		{46C50726-5A97-4142-97B3-F4B18098D51A} = {056E334B-67D1-4D1F-8C6B-530ED08015F1}
+		{F5A77591-647B-46AB-B7AA-3CC1ACB8C569} = {056E334B-67D1-4D1F-8C6B-530ED08015F1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BECC1CBC-686A-44D8-B115-6659903A8960}
+	EndGlobalSection
+EndGlobal
