@@ -15,7 +15,7 @@ namespace PrismInspectionAppTemplate.Modules
             if (isBootRegisterd)
             {
                 var bootstrapManager = containerProvider.Resolve<IBootstrapManager>();
-                bootstrapManager.AddBootstrap(BootstrapName.Setting, containerProvider.Resolve<SettingBootstrapper>());
+                bootstrapManager.AddBootstrap(BootstrapName.SETTING, containerProvider.Resolve<SettingBootstrapper>());
             }
         }
 

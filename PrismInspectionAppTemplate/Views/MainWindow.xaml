@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:cvsWindow="clr-namespace:CvsService.UI.Windows.UI.Units;assembly=CvsService.UI.Windows"
         xmlns:cvsControl="clr-namespace:CvsService.UI.CustomControls.UI.Units;assembly=CvsService.UI.CustomControls"
+        xmlns:prism="http://prismlibrary.com/"
         xmlns:coreNames="clr-namespace:PrismInspectionAppTemplate.Core.Names;assembly=PrismInspectionAppTemplate.Core"
         xmlns:vm="clr-namespace:PrismInspectionAppTemplate.ViewModels"
         d:DataContext="{d:DesignInstance Type=vm:MainViewModel}"
@@ -40,5 +41,17 @@
             </StackPanel>
             <cvsControl:TitleBarArea/>
         </Grid>
+
+        <!-- Control Bar -->
+        <ContentControl
+            Grid.Row="1"
+            Margin="10 10 10 0"
+            prism:RegionManager.RegionName="{x:Static coreNames:RegionNames.CONTROL}"/>
+
+        <!-- Main View -->
+        <ContentControl
+            Grid.Row="2"
+            Margin="10"
+            prism:RegionManager.RegionName="{x:Static coreNames:RegionNames.MAIN}"/>
     </Grid>
 </cvsWindow:CustomWindow>

@@ -5,11 +5,36 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:vm="clr-namespace:PrismInspectionAppTemplate.ControlBar.ViewModels"
              xmlns:cvsWindow="clr-namespace:CvsService.UI.Windows.UI.Units;assembly=CvsService.UI.Windows"
+             xmlns:cvsCC="clr-namespace:CvsService.UI.CustomControls.UI.Units;assembly=CvsService.UI.CustomControls"
+             xmlns:cvsIcon="clr-namespace:CvsService.UI.Icons;assembly=CvsService.UI.Icons"
+             xmlns:coreEnum="clr-namespace:PrismInspectionAppTemplate.Core.Enums;assembly=PrismInspectionAppTemplate.Core"
+             xmlns:coreConverter="clr-namespace:PrismInspectionAppTemplate.Core.Converters;assembly=PrismInspectionAppTemplate.Core"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance Type=vm:ControlBarViewModel}"
              d:DesignHeight="80" d:DesignWidth="1900">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <coreConverter:EqualToOpacityDownConverter x:Key="EqualToOpacityDownConverter"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
         <cvsWindow:Depth1Panel Margin="0" Padding="0" Height="100">
+            <StackPanel Orientation="Horizontal">
+                <cvsCC:GeometryLabelButton
+                    Width="75"
+                    Content="Home"
+                    GeometryIcon="{x:Static cvsIcon:GeometryIcons.HomeGeometry}"
+                    Opacity="{Binding MainRegionContent, Converter={StaticResource EqualToOpacityDownConverter}, ConverterParameter={x:Static coreEnum:ViewType.HomeView}}"
+                    Command="{Binding MainRegionChangeClickCommand}"
+                    CommandParameter="{x:Static coreEnum:ViewType.HomeView}"/>
+                <cvsCC:GeometryLabelButton
+                    Width="80"
+                    Content="Setting"
+                    GeometryIcon="{x:Static cvsIcon:GeometryIcons.SettingGeometry}"
+                    Opacity="{Binding MainRegionContent, Converter={StaticResource EqualToOpacityDownConverter}, ConverterParameter={x:Static coreEnum:ViewType.SettingView}}"
+                    Command="{Binding MainRegionChangeClickCommand}"
+                    CommandParameter="{x:Static coreEnum:ViewType.SettingView}"/>
+            </StackPanel>
         </cvsWindow:Depth1Panel>
     </Grid>
 </UserControl>

@@ -35,6 +35,7 @@
     <Reference Include="CvsService.UI.Windows">
       <HintPath>..\PrismInspectionAppTemplate\Dll\CvsService.UI.Windows.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="Prism, Version=8.1.97.5141, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.8.1.97\lib\net47\Prism.dll</HintPath>
     </Reference>
@@ -48,8 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\EqualToOpacityDownConverter.cs" />
+    <Compile Include="Enums\RegionType.cs" />
+    <Compile Include="Enums\ViewType.cs" />
+    <Compile Include="Events\MainWindowClosedEvent.cs" />
+    <Compile Include="Events\MainWindowClosingEvent.cs" />
     <Compile Include="Names\BootstrapName.cs" />
     <Compile Include="Names\RegionNames.cs" />
+    <Compile Include="Names\ViewNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Bootstrap\BootstrapManager.cs" />
     <Compile Include="Services\Bootstrap\BootstrapperInfo.cs" />

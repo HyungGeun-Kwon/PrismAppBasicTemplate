@@ -1,7 +1,7 @@
 ﻿namespace PrismInspectionAppTemplate.Core.Names
 {
-    public class BootstrapName
+    public static class BootstrapName
     {
-        public const string Setting = "Setting";
+        public const string SETTING = "Setting";
     }
 }
