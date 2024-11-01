@@ -4,9 +4,26 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PrismInspectionAppTemplate.Setting.Views"
-             mc:Ignorable="d" 
+             xmlns:cvsWindow="clr-namespace:CvsService.UI.Windows.UI.Units;assembly=CvsService.UI.Windows"
+             xmlns:cvsCC="clr-namespace:CvsService.UI.CustomControls.UI.Units;assembly=CvsService.UI.CustomControls"
+             xmlns:cvsWinConvt="clr-namespace:CvsService.UI.Windows.Converters;assembly=CvsService.UI.Windows"
+             xmlns:vm="clr-namespace:PrismInspectionAppTemplate.Setting.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:SettingViewModel}"
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <cvsWinConvt:WindowThemeConverter x:Key="WindowThemeConverter"/>
+    </UserControl.Resources>
     <Grid>
-            
+        <cvsWindow:Depth1Panel>
+            <StackPanel>
+                <cvsCC:LabelComboBox 
+                    FontSize="20"
+                    Margin="20 10"
+                    ComboBoxWidth="200" ComboBoxFontSize="15" LabelText="Theme : "
+                    ItemsSource="{Binding WindowThemeStrings, Source={StaticResource WindowThemeConverter}}"
+                    SelectedIndex="{Binding SettingRepo.Setting.WindowSetting.Theme, Converter={StaticResource WindowThemeConverter}}"/>
+            </StackPanel>
+        </cvsWindow:Depth1Panel>
     </Grid>
 </UserControl>

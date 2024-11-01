@@ -17,6 +17,7 @@ namespace PrismInspectionAppTemplate
         {
             _ = new App()
                 .WireViewViewModuel<WireDataContext>()
+                .AddInversionModule<ViewModule>()
                 .AddInversionModule<BootstrapModule>()
                 .AddInversionModule<DisposeModule>()
                 .AddInversionModule<RepositoryModule>()

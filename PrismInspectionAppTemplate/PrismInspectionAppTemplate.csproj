@@ -101,6 +101,7 @@
     <Compile Include="Modules\RepositoryModule.cs" />
     <Compile Include="Modules\DisposeModule.cs" />
     <Compile Include="Modules\BootstrapModule.cs" />
+    <Compile Include="Modules\ViewModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

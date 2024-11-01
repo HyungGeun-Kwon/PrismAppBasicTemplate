@@ -4,24 +4,37 @@ using System.Windows;
 using System.Windows.Input;
 using Prism.Commands;
 using Prism.Events;
+using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Regions;
 using PrismInspectionAppTemplate.Core.Events;
 using PrismInspectionAppTemplate.Core.Names;
 using PrismInspectionAppTemplate.Core.Service.Dispose;
+using PrismInspectionAppTemplate.Core.Service.Setting;
 
 namespace PrismInspectionAppTemplate.ViewModels
 {
     public class MainViewModel : BindableBase
     {
-
         private readonly IRegionManager _regionManager;
         private readonly IEventAggregator _eventAggregator;
         private readonly IDisposeManager _disposeManager;
 
+        private ISettingRepository _settingRepo;
+        public ISettingRepository SettingRepo { get => _settingRepo; set => SetProperty(ref _settingRepo, value); }
+
         public ICommand LoadedCommand => new DelegateCommand(OnLoaded);
         public ICommand ClosingCommand => new DelegateCommand<CancelEventArgs>(OnClosing);
         public ICommand ClosedCommand => new DelegateCommand(OnClosed);
+
+        public MainViewModel(IContainerProvider containerProvider)
+        {
+            _regionManager = containerProvider.Resolve<IRegionManager>();
+            _eventAggregator = containerProvider.Resolve<IEventAggregator>();
+            _disposeManager = containerProvider.Resolve<IDisposeManager>();
+
+            SettingRepo = containerProvider.Resolve<ISettingRepository>();
+        }
 
         private void OnLoaded()
         {

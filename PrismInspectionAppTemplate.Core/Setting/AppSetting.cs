@@ -6,11 +6,12 @@ namespace PrismInspectionAppTemplate.Core.Setting
 {
     public class AppSetting : BindableBase, ISetting
     {
-        private WindowSetting _windowSetting;
+        private WindowSetting _windowSetting = new WindowSetting();
 
         [XmlElement]
         public WindowSetting WindowSetting { get => _windowSetting; set => SetProperty(ref _windowSetting, value); }
 
+        public AppSetting() { }
 
         public void LoadComplete()
         {

@@ -10,5 +10,7 @@ namespace PrismInspectionAppTemplate.Core.Setting
 
         [XmlElement]
         public EWindowTheme Theme { get => _theme; set => SetProperty(ref _theme, value); }
+
+        public WindowSetting() { }
     }
 }

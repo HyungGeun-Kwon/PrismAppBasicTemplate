@@ -18,7 +18,6 @@ namespace PrismInspectionAppTemplate.ControlBar.ViewModels
     public class ControlBarViewModel : BindableBase
     {
         private readonly IRegionManager _regionManager;
-        private readonly IDialogService _dialogService;
 
         private ViewType _mainRegionContent;
         public ViewType MainRegionContent { get => _mainRegionContent; set => SetProperty(ref _mainRegionContent, value); }
@@ -27,7 +26,8 @@ namespace PrismInspectionAppTemplate.ControlBar.ViewModels
 
         public ControlBarViewModel(IContainerProvider containerProvider)
         {
-
+            _regionManager = containerProvider.Resolve<IRegionManager>();
+            MainRegionContent = ViewType.HomeView;
         }
 
         private void OnMainRegionChangeClick(object parameter)

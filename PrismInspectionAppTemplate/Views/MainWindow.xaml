@@ -8,10 +8,24 @@
         xmlns:prism="http://prismlibrary.com/"
         xmlns:coreNames="clr-namespace:PrismInspectionAppTemplate.Core.Names;assembly=PrismInspectionAppTemplate.Core"
         xmlns:vm="clr-namespace:PrismInspectionAppTemplate.ViewModels"
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
         d:DataContext="{d:DesignInstance Type=vm:MainViewModel}"
         mc:Ignorable="d"
-        WindowStyle="None"
+        WindowStyle="None" 
+        Theme="{Binding SettingRepo.Setting.WindowSetting.Theme}"
         Title="MainWindow" Height="1080" Width="1920">
+    <b:Interaction.Triggers>
+        <b:EventTrigger EventName="Loaded">
+            <b:InvokeCommandAction Command="{Binding LoadedCommand}"/>
+        </b:EventTrigger>
+        <b:EventTrigger EventName="Closing">
+            <b:InvokeCommandAction Command="{Binding ClosingCommand}"/>
+        </b:EventTrigger>
+        <b:EventTrigger EventName="Closed">
+            <b:InvokeCommandAction Command="{Binding ClosedCommand}"/>
+        </b:EventTrigger>
+    </b:Interaction.Triggers>
+
     <Grid>
         <Grid.RowDefinitions>
             <!-- Title Bar -->
