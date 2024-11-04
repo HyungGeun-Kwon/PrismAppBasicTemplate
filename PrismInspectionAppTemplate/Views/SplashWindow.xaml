@@ -1,11 +1,11 @@
-﻿<Window x:Class="PrismInspectionAppTemplate.Views.StartupWindow"
+﻿<Window x:Class="PrismInspectionAppTemplate.Views.SplashWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:PrismInspectionAppTemplate.ViewModels"
         xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
-        d:DataContext="{d:DesignInstance Type=vm:StartupViewModel}"
+        d:DataContext="{d:DesignInstance Type=vm:SplashViewModel}"
         mc:Ignorable="d"
         Title="StartupWindow" Height="520" Width="450">
     <Window.Resources>

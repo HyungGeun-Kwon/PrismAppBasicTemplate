@@ -21,7 +21,7 @@ namespace PrismInspectionAppTemplate
                 .AddInversionModule<BootstrapModule>()
                 .AddInversionModule<DisposeModule>()
                 .AddInversionModule<RepositoryModule>()
-                .ActivateStartupWindow<StartupWindow, StartupViewModel>()
+                .ActivateSplashWindow<SplashWindow, SplashViewModel>()
                 .Run();
         }
     }

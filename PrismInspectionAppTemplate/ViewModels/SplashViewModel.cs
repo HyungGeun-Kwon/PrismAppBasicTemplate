@@ -9,7 +9,7 @@ using PrismInspectionAppTemplate.Core.Service.Bootstrap;
 
 namespace PrismInspectionAppTemplate.ViewModels
 {
-    public class StartupViewModel : BindableBase, IStartupViewModel
+    public class SplashViewModel : BindableBase, ISplashViewModel
     {
         private IBootstrapManager _bootstrapManager;
 
@@ -24,7 +24,7 @@ namespace PrismInspectionAppTemplate.ViewModels
 
         public event EventHandler WindowLoadedCompleted;
 
-        public StartupViewModel(IBootstrapManager bootstrapManager)
+        public SplashViewModel(IBootstrapManager bootstrapManager)
         {
             _bootstrapManager = bootstrapManager;
         }

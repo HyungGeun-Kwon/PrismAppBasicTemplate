@@ -32,8 +32,8 @@ namespace PrismInspectionAppTemplate.ViewModels
             _regionManager = containerProvider.Resolve<IRegionManager>();
             _eventAggregator = containerProvider.Resolve<IEventAggregator>();
             _disposeManager = containerProvider.Resolve<IDisposeManager>();
-
             SettingRepo = containerProvider.Resolve<ISettingRepository>();
+            throw new Exception("@!E!@#!@#@!#@!@@@@@@@@@");
         }
 
         private void OnLoaded()

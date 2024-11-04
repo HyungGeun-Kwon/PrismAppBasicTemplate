@@ -17,7 +17,7 @@ namespace PrismInspectionAppTemplate.Settings
         {
             // INFO : View  - ViewModel 연결
             ViewModelLocationProvider.Register<MainWindow, MainViewModel>();
-            ViewModelLocationProvider.Register<StartupWindow, StartupViewModel>();
+            ViewModelLocationProvider.Register<SplashWindow, SplashViewModel>();
             ViewModelLocationProvider.Register<ControlBarView, ControlBarViewModel>();
             ViewModelLocationProvider.Register<HomeView, HomeViewModel>();
             ViewModelLocationProvider.Register<SettingView, SettingViewModel>();
