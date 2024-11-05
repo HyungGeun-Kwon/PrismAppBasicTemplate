@@ -27,7 +27,14 @@ namespace PrismInspectionAppTemplate.Core.Service.Setting
             _folderPath = Path.GetDirectoryName(settingFullPath);
             _settingFullPath = settingFullPath;
         }
-
+        public T GetSetting<T>() where T : ISetting
+        {
+            if (Setting is T setting)
+            {
+                return setting;
+            }
+            throw new InvalidOperationException($"The current setting is not of type {typeof(T).Name}.");
+        }
         public void Load<T>() where T : class, ISetting, new()
         {
             Setting = LoadXml<T>(_settingFullPath);
