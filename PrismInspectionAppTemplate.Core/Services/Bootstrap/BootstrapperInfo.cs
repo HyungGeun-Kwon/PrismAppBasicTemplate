@@ -19,7 +19,7 @@
         /// <param name="nowIndex">현재 Index. 0부터 시작됨.</param>
         public void SetProgressPercent(int totalCount, int nowIndex)
         {
-            ProgressPercent = (nowIndex + 1) * 100 / totalCount;
+            ProgressPercent = nowIndex * 100 / totalCount;
         }
     }
 }

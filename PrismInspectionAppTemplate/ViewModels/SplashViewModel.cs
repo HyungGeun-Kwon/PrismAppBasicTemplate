@@ -31,7 +31,7 @@ namespace PrismInspectionAppTemplate.ViewModels
 
         private Task OnLoaded()
         {
-            _bootstrapManager.BootstrapperCompletedEvent += OnBootstrapperCompleted;
+            _bootstrapManager.BootstrapperInitStartingEvent += OnBootstrapperCompleted;
             _bootstrapManager.AllBootstrappersCompletedEvent += OnAllBootstrappersCompleted;
 
             return _bootstrapManager.InitializeAllAsync();
@@ -50,7 +50,7 @@ namespace PrismInspectionAppTemplate.ViewModels
 
         private void OnAllBootstrappersCompleted(object sender, EventArgs e)
         {
-            _bootstrapManager.BootstrapperCompletedEvent -= OnBootstrapperCompleted;
+            _bootstrapManager.BootstrapperInitStartingEvent -= OnBootstrapperCompleted;
             _bootstrapManager.AllBootstrappersCompletedEvent -= OnAllBootstrappersCompleted;
             WindowLoadedCompleted?.Invoke(this, e);
         }

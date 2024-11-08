@@ -13,7 +13,7 @@ namespace PrismInspectionAppTemplate.Core.Service.Bootstrap
         public bool IsFail { get; private set; } = false;
 
         public event EventHandler<Exception> BootstrapperInitExceptionEvent;
-        public event EventHandler<BootstrapperInfo> BootstrapperCompletedEvent;
+        public event EventHandler<BootstrapperInfo> BootstrapperInitStartingEvent;
         public event EventHandler AllBootstrappersCompletedEvent;
 
         public BootstrapManager()
@@ -43,9 +43,9 @@ namespace PrismInspectionAppTemplate.Core.Service.Bootstrap
                         if (!_isContinueInitialize) break;
                         try
                         {
-                            InitBootstrapper(key);
                             _bootstrappers[key].BootstrapperInfo.SetProgressPercent(_bootstrappers.Count, i);
-                            BootstrapperCompletedEvent?.Invoke(this, _bootstrappers[key].BootstrapperInfo);
+                            BootstrapperInitStartingEvent?.Invoke(this, _bootstrappers[key].BootstrapperInfo);
+                            InitBootstrapper(key);
                             i++;
                         }
                         catch (Exception ex)

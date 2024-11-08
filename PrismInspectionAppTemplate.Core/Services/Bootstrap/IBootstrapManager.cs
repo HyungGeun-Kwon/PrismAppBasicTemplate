@@ -7,7 +7,7 @@ namespace PrismInspectionAppTemplate.Core.Service.Bootstrap
     {
         bool IsFail { get; }
 
-        event EventHandler<BootstrapperInfo> BootstrapperCompletedEvent;
+        event EventHandler<BootstrapperInfo> BootstrapperInitStartingEvent;
         event EventHandler<Exception> BootstrapperInitExceptionEvent;
         event EventHandler AllBootstrappersCompletedEvent;
 
